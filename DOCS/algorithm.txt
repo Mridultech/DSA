@@ -1,0 +1,13 @@
+
+# Algorithm for test for prime numbers
+
+Start
+input number 
+let div = 2
+while div < n-1
+    if number % div == 0;
+    print(not prime)
+else
+    div = div + 1
+print prime
+Exit
