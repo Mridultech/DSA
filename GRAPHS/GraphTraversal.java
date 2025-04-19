@@ -40,7 +40,7 @@ public class GraphTraversal {
 
     public static void createGraph(ArrayList<Edge> graph[]){ 
         for(int i = 0 ; i < graph.length; i++){
-            graph[i] = new ArrayList<>();
+            graph[i] = new ArrayList<Edge>();
         }
 
         // Adding edges to the graph
@@ -75,7 +75,7 @@ public class GraphTraversal {
                 }
             }
         }
-        System.out.println(); // print the current node after visiting all its neighbours
+        System.out.println(); // for new line after bfs traversal
      }
 
      public static void dfs(ArrayList<Edge>[] graph, int current, boolean visited[]){
@@ -83,7 +83,7 @@ public class GraphTraversal {
         System.out.print(current + " ");
         visited[current] = true; // mark it as visited
 
-        for(int i = 0 ; i < graph[current].size(); i++){
+        for(int i = 0 ; i < graph[current].size(); i++){ // yaha pe graph[current].size() karke current node ke neighbours ko check karenge
             Edge e = graph[current].get(i); // get the edge
             if(!visited[e.dest]){ // check if it is visited or not
                 dfs(graph, e.dest, visited); // call the dfs function recursively
