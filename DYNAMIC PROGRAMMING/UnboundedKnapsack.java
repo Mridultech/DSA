@@ -22,7 +22,7 @@ public class UnboundedKnapsack {
 
         for(int i = 1 ; i < n+1; i++){
             for(int j = 1; j < capacity + 1; j++){
-                if(wt[i-1] <= j){
+                if(wt[i-1] <= j){ // yaha dp[i-1][j] ka matlab hai ith coin ko exclude kr rhe hai to i-1 coins ka use karke j sum banao.
                     dp[i][j] = Math.max(val[i-1] + dp[i][j - wt[i-1]], dp[i-1][j]); // bas change itna sa hai ki dp[i-1][j - wt[i-1]] ki jagah dp[i][j - wt[i-1]] kyuki ham ith element ko repeatedly bhi add kr skte hai sack mein.
                 }
                 else {
