@@ -1,6 +1,10 @@
 import java.util.*;
 public class Basic_Array{
 
+    /*
+     * jab array type mein kuch return krna ho to : return new <arraytype>[] {value1,value2..};
+     */
+
     public static void update(int test[]){
         for(int i = 0 ; i < test.length ; i++){
             test[i] = test[i] + 1;

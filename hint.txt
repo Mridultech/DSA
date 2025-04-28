@@ -1,0 +1,1 @@
+     * jab array type mein kuch return krna ho to : return new <arraytype>[] {value1,value2..};
